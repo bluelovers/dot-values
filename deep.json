@@ -8,10 +8,25 @@
               "e": {
                 "arr": [
                   {
-                    "c": true
+                    "f": true
                   },
                   {
-                    "c": true
+                    "f": true
+                  }
+                ]
+              }
+            },
+            "x": true
+          },
+          {
+            "d": {
+              "e": {
+                "arr": [
+                  {
+                    "f": false
+                  },
+                  {
+                    "f": false
                   }
                 ]
               }
@@ -22,24 +37,10 @@
               "e": {
                 "arr": [
                   {
-                    "c": false
+                    "f": false
                   },
                   {
-                    "c": false
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "d": {
-              "e": {
-                "arr": [
-                  {
-                    "c": false
-                  },
-                  {
-                    "c": false
+                    "f": false
                   }
                 ]
               }

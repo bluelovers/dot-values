@@ -2,17 +2,17 @@ const
 	Benchmark = require('benchmark'),
 	microtime = require('microtime'),
 	jp = require('jsonpath'),
-	dv = require('..')
+	_ = require('..')
 
 const deep = require('../deep.json')
 
 let suite = new Benchmark.Suite()
 
 suite.add('dot-values', function() {
-	dv.get(deep, 'a.b.c.arr.*.d.e.arr.*.c')
+	_.get(deep, 'a.b.c.arr.*.d.e.arr.*.f')
 })
 .add('jsonpath', function() {
-	jp.query(deep, 'a.b.c.arr[*].d.e.arr[*].c')
+	jp.query(deep, 'a.b.c.arr[*].d.e.arr[*].f')
 })
 .on('complete', function() {
 	let fastest = this.filter('fastest'),
