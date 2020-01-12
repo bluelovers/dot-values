@@ -63,10 +63,10 @@ describe(relative(__filename), () =>
 	});
 
 	// @ts-ignore
-	describe(`get a.b.c.arr.*.d`, () =>
+	describe(`test deep.json`, () =>
 	{
 		// @ts-ignore
-		it(`label`, function (done)
+		it(`get a.b.c.arr.*.d`, function (done)
 		{
 			//console.log('it:inner', currentTest.title);
 			//console.log('it:inner', currentTest.fullTitle());
