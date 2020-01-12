@@ -5,6 +5,8 @@
     "outDir": "./esm",
     "rootDir": "./lib",
     "module": "esnext",
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "inlineSourceMap": false,
+    "sourceMap": true
   }
 }

@@ -1,5 +1,5 @@
-dot-values
-===
+dot-values2
+===========
 `dot-values` is a collection of dot path object mutators ([get-value](https://www.npmjs.com/package/get-value), [has-value](https://www.npmjs.com/package/has-value), [set-value](https://www.npmjs.com/package/set-value), [unset-value](https://www.npmjs.com/package/unset-value)) with one neat addition...
 
 #### You can query arrays of objects
@@ -48,7 +48,7 @@ _.get(request, 'body.users.*.permissions.*.name')
 // https://stackoverflow.com/questions/1960473/get-all-unique-values-in-an-array-remove-duplicates
 ```
 
-So just to clarify, you can reference arrays of objects with an asterisk (`*`). 
+So just to clarify, you can reference arrays of objects with an asterisk (`*`).
 
 Also `_.get` takes a default return value as the third argument (that applies to array values too).
 

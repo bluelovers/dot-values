@@ -4,7 +4,7 @@ const
 	jp = require('jsonpath'),
 	_ = require('..')
 
-const deep = require('../deep.json')
+const deep = require('../test/deep.json')
 
 let suite = new Benchmark.Suite()
 
