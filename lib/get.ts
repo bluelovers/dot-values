@@ -7,9 +7,9 @@ import _get from 'get-value';
  * @param  {*}      value
  * @return {*}
  */
-export function get<T, D = T>(target: object, path: string | string[], defaultValue?: D)
+export function get<T, D = T>(target: object, path: string | string[], defaultValue?: D): T | D | (T | D)[]
 {
-	return r<D | T>(_get, target, p(path), { default: defaultValue })
+	return r(_get, target, p(path), { default: defaultValue })
 }
 
 export default get

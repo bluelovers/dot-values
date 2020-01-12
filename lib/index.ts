@@ -10,6 +10,13 @@ export {
 	unset,
 }
 
+export {
+	get as getValue,
+	set as setValue,
+	has as hasValue,
+	unset as unsetValue,
+}
+
 export default {
 	get,
 	set,

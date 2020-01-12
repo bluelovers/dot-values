@@ -4,11 +4,6 @@
     "noImplicitAny": true,
     "inlineSourceMap": false,
     "sourceMap": true,
-    "rootDir": "./lib"
-  },
-  "exclude": [
-    "node_modules",
-    "esm",
-    "test"
-  ]
+    "noEmit": true
+  }
 }

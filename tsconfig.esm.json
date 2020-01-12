@@ -8,5 +8,10 @@
     "noImplicitAny": true,
     "inlineSourceMap": false,
     "sourceMap": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "esm",
+    "test"
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "dot-values2",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A set of object mutators with dot paths and one neat addition...",
   "keywords": [
     "dot",
@@ -42,12 +42,11 @@
     "ncu": "npx yarn-tool ncu -u",
     "npm:publish": "npm publish",
     "postpublish_": "git commit -m \"publish new version\" .",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "prepublishOnly": "yarn run build:tsc && yarn run ncu && yarn run sort-package-json && yarn run test",
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "postpublish": "git commit -m \"publish new version\" .",
     "sort-package-json": "npx sort-package-json ./package.json",
-    "pretest": "yarn run build:tsc",
-    "test": "mocha --reporter spec --timeout 10000",
+    "test": "npx mocha --debug --require ts-node/register !(node_modules)/**/*.{test,spec}.{ts,tsx}",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },

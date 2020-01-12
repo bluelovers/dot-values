@@ -1,4 +1,4 @@
-import _get from 'get-value';
+import _get, { Options } from 'get-value';
 import _set from 'set-value';
 import _has from 'has-value';
 import _unset from 'unset-value';
@@ -11,7 +11,7 @@ import _unset from 'unset-value';
  * @param  {Array} result (optional)
  * @return {*}
  */
-export function r<T>(fn: typeof _get | typeof _set | typeof _has | typeof _unset, target: unknown | unknown[], path: string[], extra?: unknown, result?: T[]): T | T[]
+export function r<T, F extends typeof _get | typeof _set | typeof _has | typeof _unset>(fn: F, target: unknown | unknown[], path: string[], extra?: Parameters<F>[2], result?: T[]): T | T[]
 {
 	let symIndex = path.indexOf('*'),
 		hasResult = Array.isArray(result),
