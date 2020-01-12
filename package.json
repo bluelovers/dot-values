@@ -2,14 +2,6 @@
   "name": "dot-values",
   "version": "1.0.3",
   "description": "A set of object mutators with dot paths and one neat addition...",
-  "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec --timeout 10000"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bajankristof/dot-values.git"
-  },
   "keywords": [
     "dot",
     "dots",
@@ -26,12 +18,33 @@
     "properties",
     "object"
   ],
-  "author": "",
-  "license": "MIT",
+  "homepage": "https://github.com/bajankristof/dot-values#readme",
   "bugs": {
     "url": "https://github.com/bajankristof/dot-values/issues"
   },
-  "homepage": "https://github.com/bajankristof/dot-values#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bajankristof/dot-values.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "main": "lib/index",
+  "module": "esm/index",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "ncu": "npx yarn-tool ncu -u",
+    "npm:publish": "npm publish",
+    "postpublish_": "git commit -m \"publish new version\" .",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "sort-package-json": "npx sort-package-json ./package.json",
+    "test": "mocha --reporter spec --timeout 10000",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
   "dependencies": {
     "get-value": "^3.0.1",
     "has-value": "^2.0.2",
@@ -39,10 +52,11 @@
     "unset-value": "^1.0.0"
   },
   "devDependencies": {
+    "@bluelovers/tsconfig": "^1.0.13",
     "benchmark": "^2.1.4",
     "chai": "^4.2.0",
     "faker": "^4.1.0",
     "jsonpath": "^1.0.2",
-    "mocha": "^6.2.0"
+    "mocha": "^7.0.0"
   }
 }
