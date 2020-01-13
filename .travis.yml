@@ -1,0 +1,13 @@
+os:
+  - linux
+  - osx
+language: node_js
+node_js:
+  - node
+  - lts/*
+jobs:
+  allow_failures:
+    - node_js: '6'
+    - node_js: '4'
+    - node_js: '0.12'
+    - node_js: '0.10'
