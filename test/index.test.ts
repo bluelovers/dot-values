@@ -118,70 +118,20 @@ describe(relative(__filename), () =>
 			expect(actual).to.be.deep.equal(expected);
 			//assert.isOk(actual.value, util.inspect(actual));
 		});
-	});
 
-	// @ts-ignore
-	describe(`test * in object`, () =>
-	{
 		// @ts-ignore
-		it(`get a.*.c`, function ()
+		it(`get a.b\\.c.arr.2`, async function ()
 		{
 			//console.log('it:inner', currentTest.title);
 			//console.log('it:inner', currentTest.fullTitle());
 
-			let actual = get(testData, 'a.*.c');
-			let expected = [
-				undefined,
-				undefined,
-				undefined,
-				{
-					"arr": [
-						{
-							"d": {
-								"e": {
-									"arr": [
-										{
-											"f": true
-										},
-										{
-											"f": true
-										}
-									]
-								}
-							},
-							"x": true
-						},
-						{
-							"d": {
-								"e": {
-									"arr": [
-										{
-											"f": false
-										},
-										{
-											"f": false
-										}
-									]
-								}
-							}
-						},
-						{
-							"d": {
-								"e": {
-									"arr": [
-										{
-											"f": false
-										},
-										{
-											"f": false
-										}
-									]
-								}
-							}
-						}
-					]
-				}
-			];
+			let actual = get(testData, 'a.b\\.c.arr.2');
+			let expected = {
+				d: {
+					e: { arr: [ { f: false }, { f: false } ] }
+				},
+				y: true
+			};
 
 			// @ts-ignore
 			currentTest[SymbolLogOutput] = actual;
@@ -192,102 +142,18 @@ describe(relative(__filename), () =>
 		});
 
 		// @ts-ignore
-		it(`get a.*`, function ()
+		it(`get a.b\\\.c.arr.2`, async function ()
 		{
 			//console.log('it:inner', currentTest.title);
 			//console.log('it:inner', currentTest.fullTitle());
 
-			let actual = get(testData, 'a.*');
-			let expected = [
-				{
-					arr: [
-						{
-							d: {
-								e: { arr: [ { f: true }, { f: true } ] }
-							},
-							y: true
-						},
-						{
-							d: {
-								e: { arr: [ { f: false }, { f: false } ] }
-							},
-							y: true
-						},
-						{
-							d: {
-								e: { arr: [ { f: false }, { f: false } ] }
-							},
-							y: true
-						}
-					]
+			let actual = get(testData, 'a.b\\\.c.arr.2');
+			let expected = {
+				d: {
+					e: { arr: [ { f: false }, { f: false } ] }
 				},
-				{
-					arr: [
-						{
-							d: {
-								e: { arr: [ { f: true }, { f: true } ] }
-							},
-							z: true
-						},
-						{
-							d: {
-								e: { arr: [ { f: false }, { f: false } ] }
-							},
-							z: true
-						},
-						{
-							d: {
-								e: { arr: [ { f: false }, { f: false } ] }
-							},
-							z: true
-						}
-					]
-				},
-				{
-					arr: [
-						{
-							d: {
-								e: { arr: [ { f: true }, { f: true } ] }
-							},
-							w: true
-						},
-						{
-							d: {
-								e: { arr: [ { f: false }, { f: false } ] }
-							},
-							w: true
-						},
-						{
-							d: {
-								e: { arr: [ { f: false }, { f: false } ] }
-							},
-							w: true
-						}
-					]
-				},
-				{
-					c: {
-						arr: [
-							{
-								d: {
-									e: { arr: [ { f: true }, { f: true } ] }
-								},
-								x: true
-							},
-							{
-								d: {
-									e: { arr: [ { f: false }, { f: false } ] }
-								}
-							},
-							{
-								d: {
-									e: { arr: [ { f: false }, { f: false } ] }
-								}
-							}
-						]
-					}
-				}
-			];
+				y: true
+			};
 
 			// @ts-ignore
 			currentTest[SymbolLogOutput] = actual;
@@ -296,6 +162,51 @@ describe(relative(__filename), () =>
 			expect(actual).to.be.deep.equal(expected);
 			//assert.isOk(actual.value, util.inspect(actual));
 		});
+
+		// @ts-ignore
+		it(`get a.b\\\\.c.arr.2`, async function ()
+		{
+			//console.log('it:inner', currentTest.title);
+			//console.log('it:inner', currentTest.fullTitle());
+
+			let actual = get(testData, 'a.b\\\\.c.arr.2');
+			let expected = {
+				d: {
+					e: { arr: [ { f: false }, { f: false } ] }
+				},
+				z: true
+			};
+
+			// @ts-ignore
+			currentTest[SymbolLogOutput] = actual;
+
+			//expect(actual).to.be.ok;
+			expect(actual).to.be.deep.equal(expected);
+			//assert.isOk(actual.value, util.inspect(actual));
+		});
+
+		// @ts-ignore
+		it(`get a.b\\\\\\.c.arr.2`, async function ()
+		{
+			//console.log('it:inner', currentTest.title);
+			//console.log('it:inner', currentTest.fullTitle());
+
+			let actual = get(testData, 'a.b\\\\\\.c.arr.2');
+			let expected = {
+				d: {
+					e: { arr: [ { f: false }, { f: false } ] }
+				},
+				w: true
+			};
+
+			// @ts-ignore
+			currentTest[SymbolLogOutput] = actual;
+
+			//expect(actual).to.be.ok;
+			expect(actual).to.be.deep.equal(expected);
+			//assert.isOk(actual.value, util.inspect(actual));
+		});
+
 	});
 
 });

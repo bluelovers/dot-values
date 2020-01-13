@@ -4,10 +4,17 @@ import has from './has';
 import unset from './unset';
 export { get, set, has, unset, };
 export { get as getValue, set as setValue, has as hasValue, unset as unsetValue, };
+export { unset as delete, unset as deleteValue, };
 declare const _default: {
     get: typeof get;
     set: typeof set;
     has: typeof has;
     unset: typeof unset;
+    getValue: typeof get;
+    setValue: typeof set;
+    hasValue: typeof has;
+    unsetValue: typeof unset;
+    delete: typeof unset;
+    deleteValue: typeof unset;
 };
 export default _default;

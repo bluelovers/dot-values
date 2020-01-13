@@ -17,9 +17,22 @@ export {
 	unset as unsetValue,
 }
 
+export {
+	unset as delete,
+	unset as deleteValue,
+}
+
 export default {
 	get,
 	set,
 	has,
 	unset,
+
+	getValue: get,
+	setValue: set,
+	hasValue: has,
+	unsetValue: unset,
+
+	delete: unset,
+	deleteValue: unset,
 }
