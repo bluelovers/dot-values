@@ -11,3 +11,6 @@ jobs:
     - node_js: '4'
     - node_js: '0.12'
     - node_js: '0.10'
+
+before_script:
+  - yarn add typescript ts-node
