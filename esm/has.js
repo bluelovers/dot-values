@@ -1,12 +1,7 @@
-import { b, r, p } from './util';
+import { b, r } from './util';
 import _has from "has-value";
-/**
- * @param  {Object}  target
- * @param  {String}  path
- * @return {Boolean}
- */
-export function has(target, path) {
-    return b(r(_has, target, p(path)));
+export function has(target, paths) {
+    return b(r(_has, target, paths));
 }
 export default has;
 //# sourceMappingURL=has.js.map

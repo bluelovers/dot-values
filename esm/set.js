@@ -1,7 +1,7 @@
-import { r, p } from './util';
+import { r } from './util';
 import _set from 'set-value';
-export function set(target, path, value) {
-    r(_set, target, p(path), value);
+export function set(target, paths, value) {
+    r(_set, target, paths, value);
     return target;
 }
 export default set;

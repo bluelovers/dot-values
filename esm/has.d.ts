@@ -1,7 +1,3 @@
-/**
- * @param  {Object}  target
- * @param  {String}  path
- * @return {Boolean}
- */
-export declare function has(target: object, path: string | string[]): boolean;
+import { IInputPaths } from './util';
+export declare function has(target: object, paths: IInputPaths): boolean;
 export default has;

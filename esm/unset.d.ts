@@ -1,7 +1,3 @@
-/**
- * @param {Object} target
- * @param {String} path
- * @return {Boolean}
- */
-export declare function unset(target: object, path: string | string[]): boolean;
+import { IInputPaths } from './util';
+export declare function unset(target: object, paths: IInputPaths): boolean;
 export default unset;
