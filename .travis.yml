@@ -12,6 +12,9 @@ jobs:
     - node_js: '0.12'
     - node_js: '0.10'
 
+cache:
+  yarn: true
+
 install:
   - yarn
 
