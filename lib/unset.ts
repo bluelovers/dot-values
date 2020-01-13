@@ -1,15 +1,11 @@
-import { b, r, p } from './util';
-import _unset from "unset-value";
+import { b, r, IInputPaths } from './util';
+//import _unset from "unset-value";
+import _unset from "./core/unset";
 
-/**
- * @param {Object} target
- * @param {String} path
- * @return {Boolean}
- */
-export function unset(target: object, path: string | string[]): boolean
+export function unset(target: object, paths: IInputPaths): boolean
 {
 	return b(
-		r(_unset, target, p(path)),
+		r(_unset, target, paths),
 	)
 }
 
