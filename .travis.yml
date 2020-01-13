@@ -15,8 +15,12 @@ jobs:
 cache:
   yarn: true
 
+before_install:
+  - export PATH="$(yarn global bin):$PATH"
+  - yarn global add typescript ts-node
+
 install:
   - yarn
 
 before_script:
-  - yarn global add typescript ts-node
+  -
