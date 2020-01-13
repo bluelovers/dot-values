@@ -12,5 +12,8 @@ jobs:
     - node_js: '0.12'
     - node_js: '0.10'
 
+install:
+  - yarn
+
 before_script:
-  - yarn add typescript ts-node
+  - yarn global add typescript ts-node
