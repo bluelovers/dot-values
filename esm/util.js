@@ -9,13 +9,11 @@ export function r(fn, target, paths, extra, result) {
     return r0(fn, target, paths, extra, result);
 }
 export function r0(fn, target, paths, extra, result) {
-    let symIndex = paths.indexOf(SymStar), hasResult = result != null, isLast = !paths.length;
+    let symIndex = paths.indexOf(SymStar);
     if (symIndex < 0) {
-        let value = isLast
-            ? target
-            // @ts-ignore
-            : fn(target, paths, extra);
-        if (hasResult) {
+        // @ts-ignore
+        let value = fn(target, paths, extra);
+        if (typeof result != 'undefined') {
             result.push(value);
         }
         return value;
@@ -27,16 +25,16 @@ export function r0(fn, target, paths, extra, result) {
             symbol: true,
         });
         paths.shift();
-        keys
-            .forEach(k => {
-            r0(fn, target, [k].concat(paths), extra, result);
-        });
+        for (let k of keys) {
+            r0(fn, target, [k, ...paths], extra, result);
+        }
         return result;
     }
     else {
         let p1 = paths.slice(0, symIndex);
+        let o = _get(target, p1);
         let p2 = paths.slice(symIndex);
-        return r0(fn, _get(target, p1), p2, extra, result);
+        return r0(fn, o, p2, extra, result);
     }
 }
 export function ObjectKeysExtra(obj, options = {}) {

@@ -25,3 +25,7 @@ install:
 
 before_script:
   -
+
+after_script:
+  - yarn run benchmark
+  -

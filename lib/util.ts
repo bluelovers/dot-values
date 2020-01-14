@@ -22,19 +22,13 @@ export function r<T, F extends typeof _get | typeof _set | typeof _has | typeof 
 
 export function r0<T, F extends typeof _get | typeof _set | typeof _has | typeof _unset>(fn: F, target: unknown | unknown[], paths: ITSKeys[], extra?: Parameters<F>[2], result?: T[]): T | T[]
 {
-	let symIndex = paths.indexOf(SymStar),
-		hasResult = result != null,
-		isLast = !paths.length;
-
+	let symIndex = paths.indexOf(SymStar);
 	if (symIndex < 0)
 	{
-		let value = isLast
-			? target
-			// @ts-ignore
-			: fn(target, paths, extra)
-		;
+		// @ts-ignore
+		let value = fn(target, paths, extra);
 
-		if (hasResult)
+		if (typeof result != 'undefined')
 		{
 			result.push(value)
 		}
@@ -53,20 +47,21 @@ export function r0<T, F extends typeof _get | typeof _set | typeof _has | typeof
 
 		paths.shift();
 
-		keys
-			.forEach(k => {
-				r0(fn, target, [k].concat(paths), extra, result)
-			})
-		;
+		for (let k of keys)
+		{
+			r0(fn, target, [k, ...paths], extra, result)
+		}
 
 		return result
 	}
 	else
 	{
 		let p1 = paths.slice(0, symIndex);
+		let o = _get(target as object, p1 as any);
+
 		let p2 = paths.slice(symIndex);
 
-		return r0(fn, _get(target as object, p1 as any), p2, extra, result)
+		return r0(fn, o, p2, extra, result)
 	}
 }
 

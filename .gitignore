@@ -75,3 +75,6 @@ tsconfig.esm.json.tpl
 .nvmrc
 .eslintignore
 
+/test/benchmark/results/*
+
+!/test/benchmark/results/get_a_b_c_arr_0_d_e_arr_0_f.chart.html
