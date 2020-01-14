@@ -17,10 +17,11 @@ cache:
 
 before_install:
   - export PATH="$(yarn global bin):$PATH"
-  - yarn global add typescript ts-node
+  - yarn add typescript ts-node
 
 install:
   - yarn
+  -
 
 before_script:
   -
