@@ -45,12 +45,14 @@
     "lint": "npx eslint **/*.ts",
     "ncu": "npx yarn-tool ncu -u",
     "npm:publish": "npm publish",
-    "postpublish_": "git commit -m \"publish new version\" .",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly": "yarn run build:tsc && yarn run ncu && yarn run sort-package-json && yarn run test",
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
-    "postpublish": "git commit -m \"publish new version\" .",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "npx mocha --debug --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "postpublish": "git commit -m \"chore(release): publish\" .",
+    "sort-package-json": "npx yarn-tool sort",
+    "test": "ynpx mocha -- --debug --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
@@ -58,18 +60,20 @@
     "escape-split": "^1.0.5",
     "get-value": "^3.0.1",
     "has-value": "^2.0.2",
+    "isobject": "^4.0.0",
     "set-value": "^3.0.1",
-    "ts-type": "^1.2.12"
+    "split-string": "^6.1.0",
+    "ts-type": "^1.2.13"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.13",
+    "@bluelovers/tsconfig": "^1.0.19",
     "@types/benchmark": "^1.0.31",
-    "@types/chai": "^4.2.7",
-    "@types/faker": "^4.1.9",
+    "@types/chai": "^4.2.11",
+    "@types/faker": "^4.1.11",
     "@types/get-value": "^3.0.1",
     "@types/jsonpath": "^0.2.0",
     "@types/microtime": "^2.1.0",
-    "@types/mocha": "^5.2.7",
+    "@types/mocha": "^7.0.2",
     "@types/node": "^13.1.6",
     "@types/set-value": "^2.0.0",
     "benchmark": "^2.1.4",
@@ -82,8 +86,7 @@
     "false": "^0.0.4",
     "jsonpath": "^1.0.2",
     "microtime": "^3.0.0",
-    "mocha": "^7.0.0",
-    "split-string": "^6.1.0",
-    "unset-value": "bluelovers/unset-value"
+    "mocha": "^7.1.1",
+    "unset-value": "github:bluelovers/unset-value"
   }
 }
