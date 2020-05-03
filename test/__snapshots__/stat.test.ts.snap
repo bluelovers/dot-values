@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test * in object get a.* 1`] = `
+Array [
+  Object {
+    "arr": Array [
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": true,
+              },
+              Object {
+                "f": true,
+              },
+            ],
+          },
+        },
+        "y": true,
+      },
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": false,
+              },
+              Object {
+                "f": false,
+              },
+            ],
+          },
+        },
+        "y": true,
+      },
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": false,
+              },
+              Object {
+                "f": false,
+              },
+            ],
+          },
+        },
+        "y": true,
+      },
+    ],
+  },
+  Object {
+    "arr": Array [
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": true,
+              },
+              Object {
+                "f": true,
+              },
+            ],
+          },
+        },
+        "z": true,
+      },
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": false,
+              },
+              Object {
+                "f": false,
+              },
+            ],
+          },
+        },
+        "z": true,
+      },
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": false,
+              },
+              Object {
+                "f": false,
+              },
+            ],
+          },
+        },
+        "z": true,
+      },
+    ],
+  },
+  Object {
+    "arr": Array [
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": true,
+              },
+              Object {
+                "f": true,
+              },
+            ],
+          },
+        },
+        "w": true,
+      },
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": false,
+              },
+              Object {
+                "f": false,
+              },
+            ],
+          },
+        },
+        "w": true,
+      },
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": false,
+              },
+              Object {
+                "f": false,
+              },
+            ],
+          },
+        },
+        "w": true,
+      },
+    ],
+  },
+  Object {
+    "c": Object {
+      "arr": Array [
+        Object {
+          "d": Object {
+            "e": Object {
+              "arr": Array [
+                Object {
+                  "f": true,
+                },
+                Object {
+                  "f": true,
+                },
+              ],
+            },
+          },
+          "x": true,
+        },
+        Object {
+          "d": Object {
+            "e": Object {
+              "arr": Array [
+                Object {
+                  "f": false,
+                },
+                Object {
+                  "f": false,
+                },
+              ],
+            },
+          },
+        },
+        Object {
+          "d": Object {
+            "e": Object {
+              "arr": Array [
+                Object {
+                  "f": false,
+                },
+                Object {
+                  "f": false,
+                },
+              ],
+            },
+          },
+        },
+      ],
+    },
+  },
+]
+`;
+
+exports[`test * in object get a.*.c 1`] = `
+Array [
+  undefined,
+  undefined,
+  undefined,
+  Object {
+    "arr": Array [
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": true,
+              },
+              Object {
+                "f": true,
+              },
+            ],
+          },
+        },
+        "x": true,
+      },
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": false,
+              },
+              Object {
+                "f": false,
+              },
+            ],
+          },
+        },
+      },
+      Object {
+        "d": Object {
+          "e": Object {
+            "arr": Array [
+              Object {
+                "f": false,
+              },
+              Object {
+                "f": false,
+              },
+            ],
+          },
+        },
+      },
+    ],
+  },
+]
+`;

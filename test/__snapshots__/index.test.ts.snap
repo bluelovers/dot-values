@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test deep.json get a.b.c.arr.*.d 1`] = `
+Array [
+  Object {
+    "e": Object {
+      "arr": Array [
+        Object {
+          "f": true,
+        },
+        Object {
+          "f": true,
+        },
+      ],
+    },
+  },
+  Object {
+    "e": Object {
+      "arr": Array [
+        Object {
+          "f": false,
+        },
+        Object {
+          "f": false,
+        },
+      ],
+    },
+  },
+  Object {
+    "e": Object {
+      "arr": Array [
+        Object {
+          "f": false,
+        },
+        Object {
+          "f": false,
+        },
+      ],
+    },
+  },
+]
+`;
+
+exports[`test deep.json get a.b.c.arr.0.d 1`] = `
+Object {
+  "e": Object {
+    "arr": Array [
+      Object {
+        "f": true,
+      },
+      Object {
+        "f": true,
+      },
+    ],
+  },
+}
+`;
+
+exports[`test deep.json get a.b\\.c.arr.2 1`] = `
+Object {
+  "d": Object {
+    "e": Object {
+      "arr": Array [
+        Object {
+          "f": false,
+        },
+        Object {
+          "f": false,
+        },
+      ],
+    },
+  },
+  "y": true,
+}
+`;
+
+exports[`test deep.json get a.b\\.c.arr.2 2`] = `
+Object {
+  "d": Object {
+    "e": Object {
+      "arr": Array [
+        Object {
+          "f": false,
+        },
+        Object {
+          "f": false,
+        },
+      ],
+    },
+  },
+  "y": true,
+}
+`;
+
+exports[`test deep.json get a.b\\\\.c.arr.2 1`] = `
+Object {
+  "d": Object {
+    "e": Object {
+      "arr": Array [
+        Object {
+          "f": false,
+        },
+        Object {
+          "f": false,
+        },
+      ],
+    },
+  },
+  "z": true,
+}
+`;
+
+exports[`test deep.json get a.b\\\\\\.c.arr.2 1`] = `
+Object {
+  "d": Object {
+    "e": Object {
+      "arr": Array [
+        Object {
+          "f": false,
+        },
+        Object {
+          "f": false,
+        },
+      ],
+    },
+  },
+  "w": true,
+}
+`;

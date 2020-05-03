@@ -5,7 +5,7 @@ dot-values2
 #### You can query arrays of objects
 
 ```js
-const _ = require('dot-values')
+const _ = require('dot-values2')
 
 let request = {
 	header: {
