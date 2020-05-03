@@ -34,6 +34,7 @@
   "author": "bajankristof",
   "main": "lib/index",
   "module": "esm/index",
+  "types": "lib/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "test"
