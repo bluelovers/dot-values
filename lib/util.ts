@@ -7,6 +7,7 @@ import splitString from 'split-string';
 // @ts-ignore
 import escapeSplit from 'escape-split';
 import { ITSKeys } from 'ts-type/lib/type/base';
+import { IPathsInput } from './types';
 
 const SymStar = Symbol('*');
 
@@ -95,14 +96,16 @@ export function ObjectKeysExtra(obj: object, options: {
  * @param {string | ITSKeys[]} paths
  * @returns {ITSKeys[]}
  */
-export function p(paths: string | ITSKeys[]): ITSKeys[]
+export function p(paths: IPathsInput): ITSKeys[]
 {
 	return p1(p0(paths));
 }
 
-export function p0(paths: string | ITSKeys[]): ITSKeys[]
+export function p0(paths: IPathsInput): ITSKeys[]
 {
 	if (Array.isArray(paths)) return paths.slice();
+
+	if (typeof paths === 'symbol') return [paths];
 
 	return splitSpecific(paths);
 }

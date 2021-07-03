@@ -3,8 +3,10 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "inlineSourceMap": false,
+    "esModuleInterop": true,
     "sourceMap": true,
-    "rootDir": "./lib"
+    "rootDir": "./lib",
+    "importHelpers": true
   },
   "exclude": [
     "node_modules",

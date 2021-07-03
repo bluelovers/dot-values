@@ -58,6 +58,8 @@ export function p(paths) {
 export function p0(paths) {
     if (Array.isArray(paths))
         return paths.slice();
+    if (typeof paths === 'symbol')
+        return [paths];
     return splitSpecific(paths);
 }
 export function p1(paths) {
