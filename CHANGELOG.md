@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/bluelovers/dot-values/compare/dot-values2@2.0.5...dot-values2@2.0.6) (2022-06-09)
+
+
+### 🛠　Build System
+
+* update typescript ([0ff1abe](https://github.com/bluelovers/dot-values/commit/0ff1abe49cafebde49a802309a0c183c3988df54))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([5bf9ee7](https://github.com/bluelovers/dot-values/commit/5bf9ee784260a8db8e4368fc727c4ef010b7b0ad))
+
+
+
+
+
 ## [2.0.5](https://github.com/bluelovers/dot-values/compare/dot-values2@2.0.3...dot-values2@2.0.5) (2021-07-03)
 
 **Note:** Version bump only for package dot-values2
