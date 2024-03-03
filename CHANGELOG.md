@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/bluelovers/dot-values/compare/dot-values2@2.0.6...dot-values2@2.0.7) (2024-03-03)
+
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([5b8e276](https://github.com/bluelovers/dot-values/commit/5b8e276100f39be0e1e96d4d5d64b5c25a248416))
+
+
+
 ## [2.0.6](https://github.com/bluelovers/dot-values/compare/dot-values2@2.0.5...dot-values2@2.0.6) (2022-06-09)
 
 
