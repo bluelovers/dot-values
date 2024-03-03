@@ -5,7 +5,7 @@ import _has from 'has-value';
 import _unset from 'unset-value';
 import { ITSKeys } from 'ts-type/lib/type/base';
 import { IPathsInput } from './types';
-export declare type IInputPaths = string | ITSKeys[];
+export type IInputPaths = string | ITSKeys[];
 export declare function r<T, F extends typeof _get | typeof _set | typeof _has | typeof _unset>(fn: F, target: unknown | unknown[], paths: string | ITSKeys[], extra?: Parameters<F>[2], result?: T[]): T | T[];
 export declare function r0<T, F extends typeof _get | typeof _set | typeof _has | typeof _unset>(fn: F, target: unknown | unknown[], paths: ITSKeys[], extra?: Parameters<F>[2], result?: T[]): T | T[];
 export declare function ObjectKeysExtra(obj: object, options?: {

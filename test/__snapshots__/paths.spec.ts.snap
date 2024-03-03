@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`check supported path a.{b.c}.{d.e} 1`] = `
-Array [
+[
   "a",
   "{b",
   "c}",
@@ -11,7 +11,7 @@ Array [
 `;
 
 exports[`check supported path a\\.b.c.d.e 1`] = `
-Array [
+[
   "a.b",
   "c",
   "d",
@@ -20,7 +20,7 @@ Array [
 `;
 
 exports[`check supported path allow keys to be whitespace 1`] = `
-Array [
+[
   "a",
   " ",
   "a",
@@ -28,7 +28,7 @@ Array [
 `;
 
 exports[`check supported path array 1`] = `
-Array [
+[
   "b",
   "c",
   "d",
@@ -36,7 +36,7 @@ Array [
 `;
 
 exports[`check supported path b.c.d 1`] = `
-Array [
+[
   "b",
   "c",
   "d",
@@ -44,13 +44,13 @@ Array [
 `;
 
 exports[`check supported path e\\.f\\.g 1`] = `
-Array [
+[
   "e.f.g",
 ]
 `;
 
 exports[`check supported path symbol 1`] = `
-Array [
+[
   Symbol(foo),
 ]
 `;

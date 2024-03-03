@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`check core function support escape path get 1`] = `
-Object {
-  "d": Object {
-    "e": Object {
-      "arr": Array [
-        Object {
+{
+  "d": {
+    "e": {
+      "arr": [
+        {
           "f": true,
         },
-        Object {
+        {
           "f": true,
         },
       ],
@@ -21,14 +21,14 @@ Object {
 exports[`check core function support escape path set 1`] = `999`;
 
 exports[`check core function support input array paths get 1`] = `
-Object {
-  "d": Object {
-    "e": Object {
-      "arr": Array [
-        Object {
+{
+  "d": {
+    "e": {
+      "arr": [
+        {
           "f": true,
         },
-        Object {
+        {
           "f": true,
         },
       ],

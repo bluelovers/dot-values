@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test * in object get a.* 1`] = `
-Array [
-  Object {
-    "arr": Array [
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+[
+  {
+    "arr": [
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": true,
               },
-              Object {
+              {
                 "f": true,
               },
             ],
@@ -19,14 +19,14 @@ Array [
         },
         "y": true,
       },
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": false,
               },
-              Object {
+              {
                 "f": false,
               },
             ],
@@ -34,14 +34,14 @@ Array [
         },
         "y": true,
       },
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": false,
               },
-              Object {
+              {
                 "f": false,
               },
             ],
@@ -51,16 +51,16 @@ Array [
       },
     ],
   },
-  Object {
-    "arr": Array [
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+  {
+    "arr": [
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": true,
               },
-              Object {
+              {
                 "f": true,
               },
             ],
@@ -68,14 +68,14 @@ Array [
         },
         "z": true,
       },
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": false,
               },
-              Object {
+              {
                 "f": false,
               },
             ],
@@ -83,14 +83,14 @@ Array [
         },
         "z": true,
       },
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": false,
               },
-              Object {
+              {
                 "f": false,
               },
             ],
@@ -100,16 +100,16 @@ Array [
       },
     ],
   },
-  Object {
-    "arr": Array [
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+  {
+    "arr": [
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": true,
               },
-              Object {
+              {
                 "f": true,
               },
             ],
@@ -117,14 +117,14 @@ Array [
         },
         "w": true,
       },
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": false,
               },
-              Object {
+              {
                 "f": false,
               },
             ],
@@ -132,14 +132,14 @@ Array [
         },
         "w": true,
       },
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": false,
               },
-              Object {
+              {
                 "f": false,
               },
             ],
@@ -149,17 +149,17 @@ Array [
       },
     ],
   },
-  Object {
-    "c": Object {
-      "arr": Array [
-        Object {
-          "d": Object {
-            "e": Object {
-              "arr": Array [
-                Object {
+  {
+    "c": {
+      "arr": [
+        {
+          "d": {
+            "e": {
+              "arr": [
+                {
                   "f": true,
                 },
-                Object {
+                {
                   "f": true,
                 },
               ],
@@ -167,28 +167,28 @@ Array [
           },
           "x": true,
         },
-        Object {
-          "d": Object {
-            "e": Object {
-              "arr": Array [
-                Object {
+        {
+          "d": {
+            "e": {
+              "arr": [
+                {
                   "f": false,
                 },
-                Object {
+                {
                   "f": false,
                 },
               ],
             },
           },
         },
-        Object {
-          "d": Object {
-            "e": Object {
-              "arr": Array [
-                Object {
+        {
+          "d": {
+            "e": {
+              "arr": [
+                {
                   "f": false,
                 },
-                Object {
+                {
                   "f": false,
                 },
               ],
@@ -202,20 +202,20 @@ Array [
 `;
 
 exports[`test * in object get a.*.c 1`] = `
-Array [
+[
   undefined,
   undefined,
   undefined,
-  Object {
-    "arr": Array [
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+  {
+    "arr": [
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": true,
               },
-              Object {
+              {
                 "f": true,
               },
             ],
@@ -223,28 +223,28 @@ Array [
         },
         "x": true,
       },
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": false,
               },
-              Object {
+              {
                 "f": false,
               },
             ],
           },
         },
       },
-      Object {
-        "d": Object {
-          "e": Object {
-            "arr": Array [
-              Object {
+      {
+        "d": {
+          "e": {
+            "arr": [
+              {
                 "f": false,
               },
-              Object {
+              {
                 "f": false,
               },
             ],

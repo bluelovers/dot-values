@@ -1,2 +1,2 @@
 import { ITSKeys } from 'ts-type/lib/type/base';
-export declare type IPathsInput = string | symbol | ITSKeys[];
+export type IPathsInput = string | symbol | ITSKeys[];

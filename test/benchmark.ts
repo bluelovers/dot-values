@@ -7,7 +7,7 @@ import deep from './deep.json'
 import dotValues2 from '..'
 import { name, version } from '../package.json'
 import { join } from 'path'
-import dotProp from 'dot-prop';
+import { getProperty as dotPropGetProperty } from 'dot-prop';
 import * as dotWild from 'dot-wild';
 // @ts-ignore
 import dotProp2 from 'dotprop';
@@ -53,7 +53,7 @@ export default (async () =>
 
 		benchmark.add('dot-prop', () =>
 		{
-			dotProp.get(deep, paths)
+			dotPropGetProperty(deep, paths)
 		}),
 
 		benchmark.add('dotprop', () =>
